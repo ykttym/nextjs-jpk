@@ -1,0 +1,4 @@
+.error {
+  color: white;
+  background-color: var(--main-bg-color);
+}

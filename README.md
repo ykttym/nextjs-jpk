@@ -24,8 +24,6 @@ yarn dev
 
 ## 目录结构
 
-
-
 ## 附录
 
 - [commit 规范](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)

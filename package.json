@@ -8,11 +8,53 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint:js": "eslint --fix .",
+    "lint:css": "npx stylelint **/*.css --fix",
+    "format": "prettier --write './**/*.{js,jsx,css}' --config ./.prettierrc"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "next": "9.4.4",
+    "next-images": "^1.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.2.5",
+    "lint-staged": ">=10",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all",
+    "Android >4.4.4",
+    "ios >=11"
+  ],
+  "lint-staged": {
+    "*.{js,jsx}": "npm run lint:js",
+    "**/*.css": "npm run lint:css"
   }
 }

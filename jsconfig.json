@@ -1,0 +1,12 @@
+// https://nextjs.org/docs/advanced-features/module-path-aliases
+// 路径别名，简化import文件时的路径层级计算
+{
+  "compilerOptions": {
+    // baseUrl配置选项允许直接从项目的根目录导入
+    "baseUrl": ".",
+    // path可以配置模块别名
+    "paths": {
+      "@/components/*": ["components/*"]
+    }
+  }
+}
