@@ -1,6 +1,9 @@
 {
   "name": "nextjs-jpk",
   "version": "0.1.0",
+  "license": "MIT",
+  "description": "精品课实战项目",
+  "author": "jingpinke",
   "private": true,
   "scripts": {
     "dev": "next dev",
