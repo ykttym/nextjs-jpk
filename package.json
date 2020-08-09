@@ -7,10 +7,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf .next && next build",
     "start": "next start",
     "lint:js": "eslint --fix .",
     "lint:css": "npx stylelint **/*.css --fix",
+    "version": "auto-changelog -p",
     "format": "prettier --write './**/*.{js,jsx,css}' --config ./.prettierrc"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "auto-changelog": "^2.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
@@ -56,5 +58,10 @@
   "lint-staged": {
     "*.{js,jsx}": "npm run lint:js",
     "**/*.css": "npm run lint:css"
+  },
+  "auto-changelog": {
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }

@@ -26,4 +26,6 @@ yarn dev
 
 ## 附录
 
-- [commit 规范](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+- [commit 规范](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
+- [语义化version](https://semver.org/)
+
