@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import logo from '../public/img/logo.png'
 import course from '../public/img/course.png'
+import Button from '@/components/Button'
 
 export default function Home() {
   //测试polyfill
@@ -21,6 +22,7 @@ export default function Home() {
           <a href="https://nextjs.org">Next.js!</a>
           test: {test.length}
         </h1>
+        <Button />
 
         <img src={logo} alt="logo" />
         <img src={course} alt="course" />

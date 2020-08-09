@@ -4,5 +4,5 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = withImages({
   // Use the CDN in production and localhost for development.
-  assetPrefix: isProd ? 'https://cdn.mydomain.com' : '',
+  // assetPrefix: isProd ? 'https://cdn.mydomain.com' : '',
 })

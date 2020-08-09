@@ -2,11 +2,12 @@
 // 路径别名，简化import文件时的路径层级计算
 {
   "compilerOptions": {
-    // baseUrl配置选项允许直接从项目的根目录导入
+    // baseUrl配置选项用于解析非相对模块名称,允许直接从项目的根目录导入.
     "baseUrl": ".",
-    // path可以配置模块别名
+    // path可以配置模块别名,指定要相对于baseUrl选项计算的路径映射。
     "paths": {
       "@/components/*": ["components/*"]
     }
-  }
+  },
+  "exclude": ["node_modules", ".next"]
 }

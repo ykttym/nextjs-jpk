@@ -2,7 +2,13 @@
 
 基于 Next.js 的精品课电商 wap 网站
 
+
 ## 开发
+
+### 开发环境准备
+
+- Node > 10
+- global yarn
 
 ```bash
 # 首次安装
@@ -15,7 +21,7 @@ yarn dev
 
 ## 技术栈
 
-- Next.js 9
+- Next.js 9.4
 - React 16
 
 ## 测试
