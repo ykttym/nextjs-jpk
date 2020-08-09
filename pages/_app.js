@@ -1,6 +1,12 @@
 import './styles.css'
+import Meta from '@/components/Common/Meta'
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Meta />
+      <Component {...pageProps} />
+    </>
+  )
 }

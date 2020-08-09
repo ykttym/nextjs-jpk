@@ -1,71 +1,22 @@
 import Head from 'next/head'
-import logo from '../public/img/logo.png'
-import course from '../public/img/course.png'
-import Button from '@/components/Button'
 
 export default function Home() {
-  //测试polyfill
-  const test = [
-    [1, 2],
-    [3, 4],
-  ].flat()
+  const SectionHeader = <header>section header</header>
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>精品课首页</title>
       </Head>
-
       <main>
-        <h1 className="title">
-          Welcome to
-          <a href="https://nextjs.org">Next.js!</a>
-          test: {test.length}
-        </h1>
-        <Button />
-
-        <img src={logo} alt="logo" />
-        <img src={course} alt="course" />
-
-        <p className="description">
-          Get started by editing
-          <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a href="https://github.com/vercel/next.js/tree/master/examples" className="card">
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card">
-            <h3>Deploy &rarr;</h3>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
+        <h3>精品课首页</h3>
+        <header>fixed seatch bar</header>
+        <section>swiper banner</section>
+        <section>swiper entries card</section>
+        <section>open course {SectionHeader}</section>
+        <section>
+          recommend courses {SectionHeader} <div>coursecard List</div>
+        </section>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer">
-          Powered by
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
     </div>
   )
 }
