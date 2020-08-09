@@ -1,6 +1,12 @@
 export default function Search() {
-  // history
-  // suggest
-  // result
-  return <div>Button</div>
+  return (
+    <main>
+      <h3>搜索页</h3>
+      <section>history</section>
+      or
+      <section>suggest</section>
+      or
+      <section>result</section>
+    </main>
+  )
 }
