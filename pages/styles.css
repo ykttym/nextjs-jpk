@@ -9,6 +9,10 @@ body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
+body {
+  font-size: 0.4rem;
+}
+
 h1,
 h2,
 h3,

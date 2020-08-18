@@ -1,3 +1,3 @@
-export default function Button() {
-  return <div>Button</div>
+export default function SectionHead() {
+  return <div>SectionHead</div>
 }

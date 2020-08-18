@@ -2,12 +2,11 @@
 
 基于 Next.js 的精品课电商 wap 网站
 
-
 ## 开发
 
 ### 开发环境准备
 
-- Node > 10
+- Node > 10 (本项目使用12.13.1)
 - global yarn
 
 ```bash
@@ -21,7 +20,7 @@ yarn dev
 
 ## 技术栈
 
-- Next.js 9.4
+- Next.js 9.5
 - React 16
 
 ## 测试

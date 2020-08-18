@@ -1,21 +1,18 @@
 import Head from 'next/head'
+import HomeHead from '@/p_home/HomeHead'
+import Talk from '@/p_home/Talk'
+import Recommend from '@/p_home/Recommend'
 
 export default function Home() {
-  const SectionHeader = <header>section header</header>
   return (
     <div className="container">
       <Head>
         <title>精品课首页</title>
       </Head>
       <main>
-        <h3>精品课首页</h3>
-        <header>fixed seatch bar</header>
-        <section>swiper banner</section>
-        <section>swiper entries card</section>
-        <section>open course {SectionHeader}</section>
-        <section>
-          recommend courses {SectionHeader} <div>coursecard List</div>
-        </section>
+        <HomeHead />
+        <Talk />
+        <Recommend />
       </main>
     </div>
   )

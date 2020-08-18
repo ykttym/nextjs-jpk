@@ -22,13 +22,13 @@ export default (req, res) => {
       },
       {
         title: '四六级逆袭✌',
-        type: 2,
-        id: 1004,
+        type: 2, // 课程详情页面
+        id: 1004, // 课程id
       },
       {
         title: '四级全程班',
-        type: 1,
-        id: 102,
+        type: 1, // 分类页面
+        id: 102, // 分类id
       },
       {
         title: '王菲语法',
