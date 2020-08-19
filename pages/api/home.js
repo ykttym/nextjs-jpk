@@ -6,7 +6,7 @@ export default (req, res) => {
     code: '0',
     data: {
       // banner
-      head: [
+      banner: [
         {
           img: 'https://oimagea2.ydstatic.com/image?id=-5999083008346310239&product=xue',
           title: '5天用公式巧学英语',

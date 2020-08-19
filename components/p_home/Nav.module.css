@@ -1,0 +1,11 @@
+.nav {
+  width: 6.9rem;
+  height: 3.64rem;
+  margin: -2.16rem auto 0;
+  overflow: hidden;
+  font-size: 0.12rem;
+  background-color: #fff;
+  border-radius: 0.06rem;
+  box-shadow: 0 0.06rem 0.15rem 0 hsla(0, 0%, 88%, 0.41);
+  transform: translateZ(0);
+}

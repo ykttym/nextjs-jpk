@@ -43,5 +43,6 @@ module.exports = {
     'space-before-function-paren': 0,
     'import/extensions': 0,
     'jsx-a11y/anchor-is-valid': 0,
+    'jsx-a11y/anchor-has-content':0,
   },
 }

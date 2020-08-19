@@ -1,11 +1,15 @@
 import { memo } from 'react'
+import Link from 'next/link'
+import s from './CourseCard.module.css'
 
 const CourseCard = ({ data = {} }) => {
-  const { courseTitle = '' } = data
+  const { courseTitle = '', id = '' } = data
   return (
-    <div>
-      <p>{courseTitle}</p>
-    </div>
+    <Link href="/course/detail/[id]" as={`/course/detail/${id}`}>
+      <a className={`${s.card} border-b-1px`}>
+        <p>{courseTitle}</p>
+      </a>
+    </Link>
   )
 }
 
