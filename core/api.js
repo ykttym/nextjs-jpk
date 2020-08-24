@@ -21,4 +21,4 @@ export const getSearchSuggest = (kw = '') =>
 export const getHome = () => request.get('/home')
 
 // 首页推荐
-export const getRecommend = () => request.get('/recommend')
+export const getRecommend = (params) => request.get('/recommend', { params })
