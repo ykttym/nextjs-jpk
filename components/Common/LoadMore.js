@@ -17,7 +17,6 @@ function renderCont(isLoadingMore, hasMore) {
 class LoadMore extends PureComponent {
   constructor(props) {
     super(props)
-    // this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       isLoadingMore: false,
     }

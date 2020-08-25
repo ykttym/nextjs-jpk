@@ -3,7 +3,8 @@ import ReactSlick from 'react-slick'
 import s from './Banner.module.css'
 
 const Banner = ({ data = [] }) => {
-  const isSwiperable = data && data.length
+  // 这里对只有一张图片的case做了处理
+  const isSwiperable = !!(data && data.length)
   const settings = {
     arrows: false,
     lazyLoad: true,
