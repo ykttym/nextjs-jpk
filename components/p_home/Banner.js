@@ -1,36 +1,36 @@
-import { useState } from 'react'
 import Link from 'next/link'
-import SwipeableViews from 'react-swipeable-views'
-import { autoPlay, virtualize } from 'react-swipeable-views-utils'
-import { mod } from 'react-swipeable-views-core'
+import ReactSlick from 'react-slick'
 import s from './Banner.module.css'
 
-const AutoPlaySwipeableViews = virtualize(autoPlay(SwipeableViews))
-
 const Banner = ({ data = [] }) => {
-  const [idx, setIdx] = useState(0)
-  const slideRenderer = ({ index, key }) => {
-    const item = data[mod(index, data.length)]
-    return (
-      <Link key={key} href="/course/detail/[id]" as={`course/detail/${item.courseId}`}>
-        <img src={item.img} alt={item.title} className={s.slide} />
-      </Link>
-    )
+  const isSwiperable = data && data.length
+  const settings = {
+    arrows: false,
+    lazyLoad: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    autoplay: isSwiperable,
+    infinite: isSwiperable,
+    swipe: isSwiperable,
+    dots: isSwiperable,
+    dotsClass: 'banner-dots',
+    className: 'home-banners',
   }
   return (
     <section className={s.wrap}>
-      <AutoPlaySwipeableViews
-        index={idx}
-        onChangeIndex={(i) => {
-          setIdx(mod(i, data.length))
-        }}
-        slideRenderer={slideRenderer}
-      />
-      <ul className={s.bannerDots}>
+      {/* 轮播 */}
+      <ReactSlick {...settings}>
         {data.map((item, index) => (
-          <li key={index} className={`${s.dot} ${index === idx ? s.active : ''}`}></li>
+          // 跳转链接
+          <Link key={index} href="/course/detail/[id]" as={`course/detail/${item.courseId}`}>
+            {/* banner图片 */}
+            <img src={item.img} key={index} alt={item.title} className={s.slide} />
+          </Link>
         ))}
-      </ul>
+      </ReactSlick>
+      {/* 半透明渐变蒙层 */}
       <div className={s.mask}></div>
     </section>
   )

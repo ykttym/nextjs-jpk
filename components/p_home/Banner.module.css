@@ -14,28 +14,5 @@
   width: 100%;
   height: 2.4rem;
   background: url('../../public/img/banner_mask.png') no-repeat;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
   background-size: 100% 100%;
-}
-
-.bannerDots {
-  position: absolute;
-  top: 3.06rem;
-  right: 0.3rem;
-  line-height: 0.01rem;
-}
-
-.dot {
-  display: inline-block;
-  width: 0.14rem;
-  height: 0.18rem;
-  margin: 0.05rem;
-  background: url('../../public/img/dot_grey.png');
-  background-size: 100%;
-}
-
-.dot.active {
-  background: url('../../public/img/dot.jpg');
-  background-size: 100%;
 }
