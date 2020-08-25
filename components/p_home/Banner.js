@@ -7,7 +7,7 @@ import s from './Banner.module.css'
 
 const AutoPlaySwipeableViews = virtualize(autoPlay(SwipeableViews))
 
-const Banner = ({ data }) => {
+const Banner = ({ data = [] }) => {
   const [idx, setIdx] = useState(0)
   const slideRenderer = ({ index, key }) => {
     const item = data[mod(index, data.length)]
@@ -21,10 +21,16 @@ const Banner = ({ data }) => {
     <section className={s.wrap}>
       <AutoPlaySwipeableViews
         index={idx}
-        onChangeIndex={(i) => setIdx(i)}
+        onChangeIndex={(i) => {
+          setIdx(mod(i, data.length))
+        }}
         slideRenderer={slideRenderer}
       />
-      {/* todo slide dot */}
+      <ul className={s.bannerDots}>
+        {data.map((item, index) => (
+          <li key={index} className={`${s.dot} ${index === idx ? s.active : ''}`}></li>
+        ))}
+      </ul>
       <div className={s.mask}></div>
     </section>
   )
