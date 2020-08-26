@@ -58,8 +58,102 @@
   font-size: 0.26rem;
 }
 
+.lessonNum {
+  margin-left: 0.2rem;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   font-size: 0.22rem;
+}
+
+/* 教师 */
+.teacherCont {
+  margin-left: 0.09rem;
+}
+
+.teacherBox {
+  position: relative;
+  display: inline-block;
+  max-width: 0.88rem;
+  margin-right: 0.36rem;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacherBox:last-child {
+  margin-right: 0;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 0.48rem;
+  height: 0.48rem;
+  margin: 0 auto 0.09rem;
+}
+
+.avatar {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.avatarBorder {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+}
+
+/* 价格/优惠/数量 */
+.promoCont {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.soldOut {
+  font-size: 0.36rem;
+  line-height: 1;
+}
+
+.warningColor {
+  color: #ff773a;
+}
+
+.promoCont .price {
+  position: relative;
+  margin-left: 0.16rem;
+  font-size: 0.36rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #ff773a;
+}
+
+.promoCont .price > .ico {
+  margin-right: 0.08rem;
+  font-size: 0.24rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.promoCont .price > .icoInIos {
+  margin-right: 0;
+  font-size: 0.36rem;
+  font-weight: bold;
+}
+
+.promoCont .deleted {
+  font-size: 0.26rem;
+  text-decoration: line-through;
+}
+
+.promoCont .desc {
+  margin-top: 0.17rem;
 }
