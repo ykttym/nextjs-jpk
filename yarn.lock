@@ -5451,6 +5451,11 @@ normalize-url@1.9.1:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.npm.taobao.org/normalize.css/download/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha1-m5iiCHOLnMJjTKrLxC0THJdIe/M=
+
 npm-run-path@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npm.taobao.org/npm-run-path/download/npm-run-path-4.0.1.tgz#b7ecd1e5ed53da8e37a55e1c2269e0b97ed748ea"
@@ -7336,6 +7341,11 @@ static-extend@^0.1.1:
   dependencies:
     define-property "^0.2.5"
     object-copy "^0.1.0"
+
+store2@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.npm.taobao.org/store2/download/store2-2.12.0.tgz?cache=0&sync_timestamp=1597247217661&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstore2%2Fdownload%2Fstore2-2.12.0.tgz#e1f1b7e1a59b6083b2596a8d067f6ee88fd4d3cf"
+  integrity sha1-4fG34aWbYIOyWWqNBn9u6I/U088=
 
 stream-browserify@3.0.0:
   version "3.0.0"

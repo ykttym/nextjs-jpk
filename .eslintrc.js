@@ -43,7 +43,10 @@ module.exports = {
     'no-param-reassign': 2,
     'space-before-function-paren': 0,
     'import/extensions': 0,
+    // extra
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/anchor-has-content':0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
   },
 }

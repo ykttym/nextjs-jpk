@@ -3,6 +3,11 @@
   margin: 0.68rem 0.32rem 0.4rem;
   overflow: hidden;
   color: #afafaf;
+
+  /* 也可以使用flex布局替换float布局 */
+
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .title {

@@ -17,6 +17,9 @@ export const getSearchSuggest = (kw = '') =>
     },
   })
 
+// 搜索建议
+export const getHotWord = () => request.get('/search/hotword')
+
 // 首页
 export const getHome = () => request.get('/home')
 

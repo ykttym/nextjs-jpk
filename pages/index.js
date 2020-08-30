@@ -8,7 +8,7 @@ export default function Home({ home = {} }) {
   const { banner } = home
 
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>精品课首页</title>
       </Head>

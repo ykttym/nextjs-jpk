@@ -35,13 +35,13 @@ class LoadMore extends PureComponent {
     if (scrollTimer) clearTimeout(scrollTimer)
     const { onReachBottom, hasMore } = this.props
     const { isLoadingMore } = this.state
-    const height = window.screen.height
-    const curPos = window.scrollY
-    const docLength = window.document.body.scrollHeight
+    const height = window.screen.height // 屏幕高度
+    const curPos = window.scrollY // 文档在垂直方向已滚动的高度
+    const docLength = window.document.body.scrollHeight // 文档的实际总高度
     /*
      * 1. 可以加载更多
      * 2. 没有正在加载更多
-     * 3. scroll触达底部
+     * 3. scroll触达底部: 已滚动距离+屏幕高度 >= 文档的总高度
      */
     if (hasMore && !isLoadingMore && curPos + height >= docLength) {
       scrollTimer = setTimeout(() => {

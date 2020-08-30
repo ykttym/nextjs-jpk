@@ -24,9 +24,9 @@ export default function Recommend() {
       })
       // 保存数据
       setRecommend({
-        list: recommend.list.concat(list),
-        pageStart: recommend.pageStart + 1,
-        hasMore: list.length === OFFSET,
+        list: recommend.list.concat(list), // 在已有数据列表上补充本次数据
+        pageStart: recommend.pageStart + 1, // 页码+1
+        hasMore: list.length === OFFSET, // 判断是否足够10条，不足意味着没有更多了。
       })
     } catch (error) {
       console.log('fetchRecommend Error', error)

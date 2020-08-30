@@ -22,6 +22,13 @@ const formatCountdown = (ms) => {
   return d === 0 ? [`${h}:${m}:${sec}`] : [`${h}:${m}:${sec}`, `${d}`]
 }
 
+/**
+ * 准确的倒计时
+ * props：
+ *   end： 终点时间
+ *   onEnd： 结束回调
+ */
+
 class CountDown extends React.Component {
   constructor(props) {
     super(props)
@@ -32,18 +39,21 @@ class CountDown extends React.Component {
   }
 
   componentDidMount() {
+    // 每次 new 一个系统时间，解决 setTimeout 不准确的问题
+    // setState 触发组件更新渲染
     if (!this.timer) {
       this.timer = window.setInterval(() => {
         this.setState({
           curTimeStamp: new Date().getTime(),
         })
-      }, 1000)
+      }, 500)
     }
   }
 
   componentDidUpdate() {
     const { end, onEnd } = this.props
     const { curTimeStamp } = this.state
+    // 每次渲染结束后，如果当前时间 > 结束时间，那么清timer，执行回调函数
     if (end - curTimeStamp < 0 && this.timer) {
       window.clearInterval(this.timer)
       this.timer = null
@@ -59,6 +69,7 @@ class CountDown extends React.Component {
   render() {
     const { end } = this.props
     const { curTimeStamp } = this.state
+    // 计算剩余时间
     const countDownArr = formatCountdown(end - curTimeStamp)
     return (
       <span>
