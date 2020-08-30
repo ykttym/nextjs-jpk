@@ -103,7 +103,7 @@ export default (req, res) => {
       // 有促销
       saleType: 1,
       // 促销结束时间
-      saleEndTime: +new Date() + 10000,
+      saleEndTime: +new Date() + 20000,
       // 原价
       price: 699,
       // 促销价格

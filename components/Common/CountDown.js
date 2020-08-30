@@ -78,7 +78,9 @@ class CountDown extends React.Component {
             <span className={s.warningColor}>{countDownArr[1]}</span>天
           </span>
         ) : null}
-        <span className={s.warningColor}>{countDownArr[0]}</span>
+        <span className={s.warningColor} suppressHydrationWarning>
+          {countDownArr[0]}
+        </span>
       </span>
     )
   }
