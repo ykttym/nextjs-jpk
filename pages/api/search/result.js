@@ -2,6 +2,18 @@
 export default (req, res) => {
   const { query } = req
   const { kw = '', start = 0, offset = 10 } = query
+  // 模拟没有结果返回
+  if (kw === 'empty') {
+    res.statusCode = 200
+    res.json({
+      code: '0',
+      msg: 'success',
+      data: [],
+    })
+    return
+  }
+
+  // 模拟分页数据
   const mockData = [
     // 课程信息
     {

@@ -21,6 +21,7 @@ export default function Search({ result, hotWord, kw }) {
   const [loading, setLoading] = useState(false) // 加载中
   const [suggestList, setSuggestList] = useState([]) // 推荐数据
   const [history, setHistory] = useLSState('searchHistory', kw ? [kw] : []) // 搜索历史
+  const [inputVal, setInputVal] = useState(kw || '') // 输入框的值
 
   // 切换到搜索结果路由
   const submitSearch = (kw = '') => {
@@ -32,6 +33,8 @@ export default function Search({ result, hotWord, kw }) {
     // 加载中
     setLoading(true)
     // 替换路由参数
+    console.log('切换路由', kw)
+    setInputVal(kw)
     router.replace({
       path: 'search',
       query: {
@@ -58,7 +61,7 @@ export default function Search({ result, hotWord, kw }) {
 
   // 渲染 内容区
   const renderContent = () => {
-    if (loading) return <div>loading...</div>
+    if (loading) return <div className={s.loading}>加载中......</div>
     switch (contType) {
       case TYPES.HISTORY:
         return (
@@ -72,7 +75,7 @@ export default function Search({ result, hotWord, kw }) {
       case TYPES.SUGGEST:
         return <Suggest submitSearch={submitSearch} data={suggestList} />
       case TYPES.RESULT:
-        return <Result data={result} />
+        return <Result data={result} kw={kw} />
       default:
         break
     }
@@ -99,6 +102,8 @@ export default function Search({ result, hotWord, kw }) {
           submitSearch={submitSearch}
           fetchSuggest={fetchSuggest}
           showHistory={showHistory}
+          inputVal={inputVal}
+          setInputVal={setInputVal}
         />
         {/* 内容区 */}
         <div className={s.content}>{renderContent()}</div>

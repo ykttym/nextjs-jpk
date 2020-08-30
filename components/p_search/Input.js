@@ -1,9 +1,8 @@
-import { useRef, useState, memo, useEffect } from 'react'
+import { memo, useRef } from 'react'
 import s from './Input.module.css'
 
-const Input = ({ keyword = '', submitSearch, fetchSuggest, showHistory }) => {
+const Input = ({ submitSearch, fetchSuggest, showHistory, inputVal, setInputVal }) => {
   const inputEl = useRef(null) // 输入框元素
-  const [inputVal, setInputVal] = useState(keyword || '') // 输入框的值
 
   // 输入框回车确认搜索（不触发onchange）
   const searchSubmit = (e) => {
@@ -47,10 +46,6 @@ const Input = ({ keyword = '', submitSearch, fetchSuggest, showHistory }) => {
     inputEl.current.focus()
   }
 
-  useEffect(() => {
-    console.log('update keyword')
-    setInputVal(keyword)
-  }, [keyword])
   return (
     <div className={s.container}>
       <div className={`${s.formCont} border-b-1px ${inputVal ? '' : s.empty}`}>

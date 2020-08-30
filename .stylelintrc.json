@@ -5,5 +5,23 @@
   ],
   "plugins": [
     "stylelint-order"
-  ]
+  ],
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "global"
+        ]
+      }
+    ]
+  }
 }
