@@ -17,7 +17,7 @@ export const getSearchSuggest = (kw = '') =>
     },
   })
 
-// 搜索建议
+// 热门词汇
 export const getHotWord = () => request.get('/search/hotword')
 
 // 首页
