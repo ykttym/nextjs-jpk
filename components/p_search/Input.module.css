@@ -46,11 +46,7 @@
   ime-mode: active;
 }
 
-.search::-webkit-clear-button {
-  -webkit-appearance: none;
-  display: none;
-}
-
+/* 自定义placeholder颜色 */
 .search::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #aab0b6;
@@ -69,10 +65,6 @@
 .search:-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #aab0b6;
-}
-
-.search::-ms-clear {
-  display: none;
 }
 
 .formCont::after {

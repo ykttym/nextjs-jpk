@@ -1,5 +1,5 @@
-import s from './History.module.css'
 import Link from 'next/link'
+import s from './History.module.css'
 
 export default function History({ history, hotWord, deleteHistory, submitSearch }) {
   // 热门搜索单位
@@ -7,7 +7,7 @@ export default function History({ history, hotWord, deleteHistory, submitSearch 
     // type = 2, 课程详情页面,
     // type = 1, 词汇
     const text = item.title.slice(0, 6)
-    const prefix = item.type === 2 ? '/course/detail/' : '/tag/'
+    const prefix = '/course/detail/'
     if (item.type === 2) {
       return (
         <Link key={`hot-item-${idx}`} href={`${prefix}[id]`} as={`${prefix}${item.id}`}>

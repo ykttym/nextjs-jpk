@@ -67,8 +67,8 @@ export default function Search({ result, hotWord, kw }) {
         return (
           <History
             submitSearch={submitSearch}
-            history={history}
             hotWord={hotWord}
+            history={history}
             deleteHistory={() => setHistory([])}
           />
         )
