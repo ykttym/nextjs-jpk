@@ -36,7 +36,7 @@ export default function Search({ result, hotWord, kw }) {
     console.log('切换路由', kw)
     setInputVal(kw)
     router.replace({
-      path: 'search',
+      path: '/search',
       query: {
         kw,
       },
